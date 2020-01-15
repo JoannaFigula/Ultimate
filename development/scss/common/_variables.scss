@@ -1,0 +1,18 @@
+$layout-size: 1300px;
+
+//colors
+$text-color:#757575; //nagłówek, , kolor tekstu w kolumnach
+$table-text-color: #616161;
+$button-color: #003366; //przyciski, wyróżnienia
+$text-button-color: #FFFFFF; //kolor tesktu przycisku
+$background-color: #FFFFFA; //kolor tła ekranów
+$info-color: #FF6600; //kolor wiadomości typu info,
+$table-color: #e9e9e9;
+$error-color: #DC143C;
+
+//fonts
+$font-family: 'Open Sans', sans-serif; //tekst
+$default-font-size: 16px; //wielkość bazowa
+$error-font-size:12px;
+$default-space: $default-font-size * 2;
+

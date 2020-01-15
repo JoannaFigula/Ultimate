@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Zadanie rekrutacyjne</title>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Charmonman:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+<body>
+
+<section class="search-section">
+    <div class="container">
+        <form class="form">
+            <div class="form-row form-group">
+                <input type="text" placeholder="Nazwa firmy" class="form-search companyName" id="companyName">
+            </div>
+            <div class="form-row work-container search-container companyPerson">
+                <input type="text" placeholder="Pracownik" class="form-search search person" id="companyEmployee">
+                <button type="submit" class="fa fa-chevron-down btn-show" aria-hidden="true"></button>
+            </div>
+            <hr>
+            <selection class="employees">
+                <ul class="employee-list">
+
+                </ul>
+            </selection>
+        </form>
+    </div>
+</section>
+
+
+<section class="task-section">
+    <form class="form taskForm">
+        <div class="container">
+            <p>Zadania</p>
+            <div id="divName">
+                <input type="text" class="form-control" id="name" placeholder="Nazwa zadania">
+                <div id="label">Nazwa zadania</div>
+            </div>
+            <div class="form-row">
+                <label class="form-label" for="price"></label>
+                <input type="number" class="form-control" id="price" placeholder="Kwota w PLN">
+            </div>
+
+            <div class="form-row">
+                <p>1euro = 4.8282</p>
+                <button type="submit" class="form-button taskBtn">
+                    Dodaj
+                </button>
+            </div>
+        </div>
+    </form>
+    <ul class="tasks-list">
+
+    </ul>
+
+</section>
+</body>
+</html>
+
+

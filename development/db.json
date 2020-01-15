@@ -1,0 +1,58 @@
+{
+  "persons": [
+    {
+      "id": 1,
+      "photo": "images/joe.jpg",
+      "name": "Joe Black",
+      "company": "ABB",
+      "tasks": [
+        {
+          "taskName": "Zadanie 1",
+          "pricePln": "2121",
+          "priceEu": "480"
+        },
+        {
+          "taskName": "Zadanie 2",
+          "pricePln": "213",
+          "priceEu": "100"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "photo": "./images/adam.jpg",
+      "name": "Adam Nowak",
+      "company": "HSBC",
+      "tasks": [
+        {
+          "taskName": "Zadanie 1",
+          "pricePln": "1200",
+          "priceEu": "400"
+        },
+        {
+          "taskName": "Zadanie 2",
+          "pricePln": "1500",
+          "priceEu": "500"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "photo": "images/michal.jpg",
+      "name": "Michał Potoczek",
+      "company": "US",
+      "tasks": [
+        {
+          "taskName": "Zadanie 1",
+          "pricePln": "2000",
+          "priceEu": "600"
+        },
+        {
+          "taskName": "Zadanie 2",
+          "pricePln": "3000",
+          "priceEu": "1000"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+body {
+    font-family: $font-family;
+    background-color: $background-color;
+}
+
+.container {
+    width: 100%;
+    max-width: $layout-size;
+    margin: 0 auto;
+}

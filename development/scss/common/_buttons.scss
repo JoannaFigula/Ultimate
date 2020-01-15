@@ -1,0 +1,36 @@
+.small-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: $button-color;
+    color: $background-color;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: $default-space/4 $default-space;
+    cursor: pointer;
+
+    &:hover {
+        background-color: lighten($button-color, 15);
+    }
+}
+
+.disabled-button {
+    background-color: $table-text-color;
+    cursor: default;
+
+    &:hover {
+        background-color: $table-text-color;
+    }
+}
+
+.icon-button {
+    
+}
+
+.disabled-icon-button {
+        
+    cursor: default;
+
+    &:hover {
+        background-color: $table-text-color;
+    }
+}
