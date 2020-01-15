@@ -21,11 +21,9 @@
         font-weight: bold;
         color:$error-color;
       }
-
       input{
         width:250px;
         padding: 6px 10px;
-
         border: 1px solid $table-color;
         border-radius: 5px;
       }
@@ -34,7 +32,6 @@
         display: flex;
         justify-content: space-between;
         position: relative;
-
       }
         .fa-chevron-down {
           padding: 6px 15px;
@@ -102,7 +99,6 @@
       color: $table-color;
     }
   }
-
 }
 
 .plan-options {
