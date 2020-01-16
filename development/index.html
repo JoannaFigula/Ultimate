@@ -36,18 +36,17 @@
     </div>
 </section>
 
-
 <section class="task-section">
     <form class="form taskForm">
         <div class="container">
             <p>Zadania</p>
             <div id="divName">
-                <input type="text" class="form-control" id="name" placeholder="Nazwa zadania">
+                <input type="text" class="form-control" id="taskTitle" placeholder="Nazwa zadania">
                 <div id="label">Nazwa zadania</div>
             </div>
             <div class="form-row">
-                <label class="form-label" for="price"></label>
-                <input type="number" class="form-control" id="price" placeholder="Kwota w PLN">
+                <label class="form-label" for="taskPrice"></label>
+                <input type="number" class="form-control" id="taskPrice" placeholder="Kwota w PLN">
             </div>
 
             <div class="form-row">
@@ -61,7 +60,12 @@
     <ul class="tasks-list">
 
     </ul>
-
+    <div class='plan-options'>
+        <div>
+            <span >Suma:</span>
+            <span>
+            <span id="sumPl"></span> PLN (<span id="sumEu"></span> EUR) </span>
+        </div></div>
 </section>
 </body>
 </html>

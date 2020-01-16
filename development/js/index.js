@@ -6,6 +6,12 @@ $(function() {
     var btnShowEmlpoyees = $(".work-container");
     var companyName = $(".companyName");
     var divPersons = $(".search");
+    var tasksList = $(".tasks-list");
+    var inputTask = $("#taskTitle");
+    var inputPrice = $("#taskPrice");
+
+
+
     loadEmlpoyees();
 
     function loadEmlpoyees() {
@@ -92,30 +98,31 @@ $(function() {
 
     function insertTasks(persons) {
         $.each(persons, function (index, person) {
-            $(".tasks-list").append(`<li class="task" data-id="${ person.id }" style=" list-style-type: none;">
+            tasksList.append(`<li class="task" data-id="${person.id}">
                     <div class="container">
                         <div class='plan-options'><table border=1 class="table table-bordered" id="total">
                             <tr class="infoHeader"><td>Nazwa zadania</td><td>Kwota w PLN</td>
                                 <td>Kwota w EUR</td><td>Opcje</td></tr>
-                            ${person.tasks.map((task) =>
-                                    `<tr class="tasks">
+                            ${person.tasks.map((task, index) =>
+                                        `<tr class="tasks">
                                         <td>${task.taskName}</td>
                                         <td class="totalPln">${task.pricePln}</td>
                                         <td class="totalEur">${task.priceEu}</td>
                                         <td><a href="#" class="btn-delete"><i class="far fa-trash-alt" style="font-size:15px; color:grey;"> Usuń</i></a>
                                         </td></tr>`)}</table></div></div></li>`);
-            $(".tasks-list").append(`<div class="container"><div class='plan-options'>
-                                   <div>
-                                     <span style="text-align:right">Suma:</span>
-                                     <span style=" text-align:center">
-                                     <span id="sumPl"></span> PLN (<span id="sumEu"></span> EUR) </span>
-                </div></div></div>`);
+            // $(".tasks-list").append(`<div class="container"><div class='plan-options'>
+            //                        <div>
+            //                          <span style="text-align:right">Suma:</span>
+            //                          <span style=" text-align:center">
+            //                          <span id="sumPl"></span> PLN (<span id="sumEu"></span> EUR) </span>
+            //     </div></div></div>`);
         });
     }
 
-    $(".taskBtn").on('submit', function (e) {
+
+    $(".taskForm").on('submit', function (e) {
         e.preventDefault();
-        console.log('submiteeeeeee');
+        console.log('submit');
         var taskVal = inputTask.val();
         var priceVal = inputPrice.val();
         addTask(taskVal, priceVal);
@@ -124,7 +131,7 @@ $(function() {
     function addTask(taskName, pricePln) {
         var newData = {
             taskName: taskName,
-            pricePln: pricePLN,
+            pricePln: pricePln,
         };
         $.ajax({
             url: apiUrl,
@@ -142,7 +149,7 @@ $(function() {
     }
         $(".tasks-list").on("click",".btn-delete", function() {
         console.log("ok Task List");
-        $(this).parent().parent().data(id);
+        var id = $(this).parent().parent().data(id);
             removeTask(id);
         });
 
@@ -158,6 +165,24 @@ $(function() {
         }).always(loadTasks);
     }
     });
+
+    calc_total_pl();
+    function calc_total_pl(){
+        var sumPl = 0;
+        $(".totalPln").each(function(){
+            sumPl += parseInt($(this).text());
+        });
+        $('#sumPl').text(sumPl);
+    }
+
+    calc_total_eur();
+    function calc_total_eur(){
+        var sumEu = 0;
+        $(".totalEur").each(function(){
+            sumEu += parseInt($(this).text());
+        });
+        $('#sumEu').text(sumEu);
+    }
 
     // console.log("ok");
     // var section = $(".section-task");

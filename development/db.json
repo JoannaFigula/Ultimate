@@ -7,11 +7,13 @@
       "company": "ABB",
       "tasks": [
         {
+          "id": 2,
           "taskName": "Zadanie 1",
           "pricePln": "2121",
           "priceEu": "480"
         },
         {
+          "id": 2,
           "taskName": "Zadanie 2",
           "pricePln": "213",
           "priceEu": "100"
@@ -25,11 +27,13 @@
       "company": "HSBC",
       "tasks": [
         {
+          "id": 1,
           "taskName": "Zadanie 1",
           "pricePln": "1200",
           "priceEu": "400"
         },
         {
+          "id": 2,
           "taskName": "Zadanie 2",
           "pricePln": "1500",
           "priceEu": "500"
@@ -43,11 +47,13 @@
       "company": "US",
       "tasks": [
         {
+          "id": 1,
           "taskName": "Zadanie 1",
           "pricePln": "2000",
           "priceEu": "600"
         },
         {
+          "id": 2,
           "taskName": "Zadanie 2",
           "pricePln": "3000",
           "priceEu": "1000"
