@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
           integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,600,600i,700,800,900&display=swap"
+          rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <script src="./js/index.js"></script>
 </head>
@@ -23,8 +25,9 @@
                 <input type="text" placeholder="Nazwa firmy" class="form-search companyName" id="companyName">
             </div>
             <div class="form-row work-container search-container companyPerson">
-                <input type="text" placeholder="Pracownik" class="form-search search person" id="companyEmployee">
-                <button type="submit" class="fa fa-chevron-down btn-show" aria-hidden="true"></button>
+                <input type="text" aria-haspopup="listbox" placeholder="Pracownik" class="form-search search person"
+                       id="companyEmployee">
+                <button type="submit" class="fa fa-chevron-down btn-show"></button>
             </div>
             <hr>
             <selection class="employees">
@@ -50,22 +53,55 @@
             </div>
 
             <div class="form-row">
-                <p>1euro = 4.8282</p>
+                <ul class="currency">
+                    <span>1 euro = </span>
+                </ul>
                 <button type="submit" class="form-button taskBtn">
                     Dodaj
                 </button>
             </div>
         </div>
     </form>
-    <ul class="tasks-list">
 
-    </ul>
-    <div class='plan-options'>
-        <div>
-            <span >Suma:</span>
-            <span>
-            <span id="sumPl"></span> PLN (<span id="sumEu"></span> EUR) </span>
-        </div></div>
+    <div class="container">
+        <div class='col-xs-12 col-sm-6 col-sm-offset-3 plan-options'>
+            <table border=1 class="table table-bordered" id="total">
+                <tr>
+                    <td>Nazwa zadania</td>
+                    <td>Kwota w PLN</td>
+                    <td>Kwota w EUR</td>
+                    <td>Opcje</td>
+                </tr>
+                <ul class="tasks-list">
+                    <li>
+                        <tr>
+                            <td>Zadanie 1</td>
+                            <td class="totalPln">800 PLN</td>
+                            <td class="totalEur">200 EUR</td>
+                            <td><a href="#" class="btn-delete"><i class="far fa-trash-alt"
+                                                                  style="font-size:15px; color:grey;"> Usuń</i></a>
+                            </td>
+                        </tr>
+                    </li>
+                    <li>
+                        <tr>
+                            <td>Zadanie 2</td>
+                            <td class="totalPln">300 PLN</td>
+                            <td class="totalEur">50 EUR</td>
+                            <td><a href="#" class="btn-delete"><i class="far fa-trash-alt"
+                                                                  style="font-size:15px; color:grey;"> Usuń</i></a>
+                            </td>
+                        </tr>
+                    </li>
+                    <div>
+                        <span style="text-align:right">Suma:</span>
+                        <span style=" text-align:center">
+                        <span id="sumPl"></span> PLN (<span id="sumEu"></span> EUR) </span>
+                    </div>
+                </ul>
+            </table>
+        </div>
+    </div>
 </section>
 </body>
 </html>
